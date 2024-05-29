@@ -36,6 +36,11 @@ class MensamaxApiService
 
         $bestellungen['today'] = $bestellungen[$today->format('Ymd')] ?? [];
         $bestellungen['tomorrow'] = $bestellungen[(clone $today)->add(new \DateInterval('P1D'))->format('Ymd')] ?? [];
+        $bestellungen['monday'] = $bestellungen[(new \DateTime('monday this week'))->format('Ymd')] ?? [];
+        $bestellungen['tuesday'] = $bestellungen[(new \DateTime('tuesday this week'))->format('Ymd')] ?? [];
+        $bestellungen['wednesday'] = $bestellungen[(new \DateTime('wednesday this week'))->format('Ymd')] ?? [];
+        $bestellungen['thursday'] = $bestellungen[(new \DateTime('thursday this week'))->format('Ymd')] ?? [];
+        $bestellungen['friday'] = $bestellungen[(new \DateTime('friday this week'))->format('Ymd')] ?? [];
 
         return [
             'kontostand' => $kontostand,
