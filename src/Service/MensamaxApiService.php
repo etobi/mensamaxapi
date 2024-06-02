@@ -36,17 +36,11 @@ class MensamaxApiService
 
         $bestellungen['today'] = $bestellungen[$today->format('Ymd')] ?? [];
         $bestellungen['tomorrow'] = $bestellungen[(clone $today)->add(new \DateInterval('P1D'))->format('Ymd')] ?? [];
-        $bestellungen['in2days'] = $bestellungen[(clone $today)->add(new \DateInterval('P2D'))->format('Ymd')] ?? [];
-        $bestellungen['in3days'] = $bestellungen[(clone $today)->add(new \DateInterval('P3D'))->format('Ymd')] ?? [];
-        $bestellungen['in4days'] = $bestellungen[(clone $today)->add(new \DateInterval('P4D'))->format('Ymd')] ?? [];
-        $bestellungen['in5days'] = $bestellungen[(clone $today)->add(new \DateInterval('P5D'))->format('Ymd')] ?? [];
-        $bestellungen['in6days'] = $bestellungen[(clone $today)->add(new \DateInterval('P6D'))->format('Ymd')] ?? [];
-        $bestellungen['in7days'] = $bestellungen[(clone $today)->add(new \DateInterval('P7D'))->format('Ymd')] ?? [];
-        $bestellungen['monday'] = $bestellungen[(new \DateTime('monday this week'))->format('Ymd')] ?? [];
-        $bestellungen['tuesday'] = $bestellungen[(new \DateTime('tuesday this week'))->format('Ymd')] ?? [];
-        $bestellungen['wednesday'] = $bestellungen[(new \DateTime('wednesday this week'))->format('Ymd')] ?? [];
-        $bestellungen['thursday'] = $bestellungen[(new \DateTime('thursday this week'))->format('Ymd')] ?? [];
-        $bestellungen['friday'] = $bestellungen[(new \DateTime('friday this week'))->format('Ymd')] ?? [];
+        $bestellungen['monday'] = $bestellungen[(new \DateTime('next monday'))->format('Ymd')] ?? [];
+        $bestellungen['tuesday'] = $bestellungen[(new \DateTime('next tuesday'))->format('Ymd')] ?? [];
+        $bestellungen['wednesday'] = $bestellungen[(new \DateTime('next wednesday'))->format('Ymd')] ?? [];
+        $bestellungen['thursday'] = $bestellungen[(new \DateTime('next thursday'))->format('Ymd')] ?? [];
+        $bestellungen['friday'] = $bestellungen[(new \DateTime('next friday'))->format('Ymd')] ?? [];
 
         return [
             'kontostand' => $kontostand,
