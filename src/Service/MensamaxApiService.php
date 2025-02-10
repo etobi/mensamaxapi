@@ -34,6 +34,13 @@ class MensamaxApiService
         }
         $helper = $this->getHelper($bestellungen);
 
+        $next = [];
+        foreach ($bestellungen as $bestellung) {
+            $next[] = $bestellung;
+        }
+
+        $bestellungen['next'] = $next;
+
         $bestellungen['today'] = $bestellungen[$today->format('Ymd')] ?? [];
         $bestellungen['tomorrow'] = $bestellungen[(clone $today)->add(new \DateInterval('P1D'))->format('Ymd')] ?? [];
         $bestellungen['monday'] = $bestellungen[(new \DateTime('next monday'))->format('Ymd')] ?? [];
@@ -175,12 +182,23 @@ class MensamaxApiService
                     'week' => (int)$date->format('W'),
                     'bestellungen' => []
                 ];
+                $chatgptService = new ChatgptService($this->config['openai_apikey']);
                 foreach (['vorspeisen', 'hauptspeisen', 'nachspeisen'] as $key) {
                     $bestellungForDay['bestellungen'][$key] = trim(
                         ($item['bestellungen'][0]['menue'][$key][0]['bezeichnung'] ?? '')
                         . ' '
                         . ($item['bestellungen'][0]['menue'][$key][0]['beschreibung'] ?? '')
                     );
+                    $shortDescription = (string)$bestellungForDay['bestellungen'][$key];
+                    if (
+                        $bestellungForDay['bestellungen'][$key]
+                        && strlen($bestellungForDay['bestellungen'][$key]) > 10
+                    ) {
+                        $shortDescription = $chatgptService->getShortDescription(
+                            (string)$bestellungForDay['bestellungen'][$key]
+                        );
+                    }
+                    $bestellungForDay['shortDescription'][$key] = $shortDescription;
                 }
                 $bestellungen[$date->format('Ymd')] = $bestellungForDay;
             }

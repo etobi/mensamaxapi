@@ -47,11 +47,11 @@ $app->post('/fetch', function (Request $request, Response $response, $args) use 
     $mensamaxApiService = new MensamaxApiService($config);
     $result = $mensamaxApiService->fetch(4);
 
-    $chatGptService = new ChatgptService($config['openai_apikey']);
-    $summary = $chatGptService->getSummary(
-        json_encode($result)
-    );
-    $result['summary'] = $summary;
+    //$chatGptService = new ChatgptService($config['openai_apikey']);
+    //$summary = $chatGptService->getSummary(
+    //    json_encode($result)
+    //);
+    //$result['summary'] = $summary;
 
     file_put_contents(__DIR__ . '/../storage/fetch.json', json_encode($result));
 
