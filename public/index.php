@@ -30,7 +30,7 @@ $app->get('/get', function (Request $request, Response $response, $args) {
     $response->getBody()->write(
         file_get_contents(__DIR__ . '/../storage/fetch.json')
     );
-    return $response;
+    return $response->withHeader('Content-Type', 'application/json');
 });
 
 $app->get('/summary', function (Request $request, Response $response, $args) use ($config) {
@@ -40,7 +40,7 @@ $app->get('/summary', function (Request $request, Response $response, $args) use
             file_get_contents(__DIR__ . '/../storage/fetch.json')
         )
     );
-    return $response;
+    return $response->withHeader('Content-Type', 'text/plain; charset=utf-8');
 });
 
 $app->post('/fetch', function (Request $request, Response $response, $args) use ($config) {
@@ -55,8 +55,8 @@ $app->post('/fetch', function (Request $request, Response $response, $args) use 
 
     file_put_contents(__DIR__ . '/../storage/fetch.json', json_encode($result));
 
-    $response->getBody()->write('ok');
-    return $response;
+    $response->getBody()->write(json_encode($result));
+    return $response->withHeader('Content-Type', 'application/json');
 });
 
 $app->run();

@@ -21,37 +21,35 @@ class MensamaxApiService
         $kontostand = $this->getKontostand();
 
         $today = new \DateTime('now');
-        $week = (int)($today->format('W'));
         $bestellungen = [];
-        foreach (range($week, $week + $weeks) as $queryWeekNumber) {
+        $currentDate = clone $today;
+        for ($i = 0; $i <= $weeks; $i++) {
             $bestellungenOfWeek = $this->getBestellungen(
-                (int)$today->format('Y'),
-                (int)$queryWeekNumber
+                (int)$currentDate->format('o'),
+                (int)$currentDate->format('W')
             );
             if (count($bestellungenOfWeek) > 0) {
                 $bestellungen = $bestellungen + $bestellungenOfWeek;
             }
+            $currentDate->modify('+1 week');
         }
         $helper = $this->getHelper($bestellungen);
 
-        $next = [];
-        foreach ($bestellungen as $bestellung) {
-            $next[] = $bestellung;
-        }
-
-        $bestellungen['next'] = $next;
-
-        $bestellungen['today'] = $bestellungen[$today->format('Ymd')] ?? [];
-        $bestellungen['tomorrow'] = $bestellungen[(clone $today)->add(new \DateInterval('P1D'))->format('Ymd')] ?? [];
-        $bestellungen['monday'] = $bestellungen[(new \DateTime('next monday'))->format('Ymd')] ?? [];
-        $bestellungen['tuesday'] = $bestellungen[(new \DateTime('next tuesday'))->format('Ymd')] ?? [];
-        $bestellungen['wednesday'] = $bestellungen[(new \DateTime('next wednesday'))->format('Ymd')] ?? [];
-        $bestellungen['thursday'] = $bestellungen[(new \DateTime('next thursday'))->format('Ymd')] ?? [];
-        $bestellungen['friday'] = $bestellungen[(new \DateTime('next friday'))->format('Ymd')] ?? [];
+        $shortcuts = [
+            'next' => array_values($bestellungen),
+            'today' => $bestellungen[$today->format('Ymd')] ?? [],
+            'tomorrow' => $bestellungen[(clone $today)->add(new \DateInterval('P1D'))->format('Ymd')] ?? [],
+            'monday' => $bestellungen[(new \DateTime('next monday'))->format('Ymd')] ?? [],
+            'tuesday' => $bestellungen[(new \DateTime('next tuesday'))->format('Ymd')] ?? [],
+            'wednesday' => $bestellungen[(new \DateTime('next wednesday'))->format('Ymd')] ?? [],
+            'thursday' => $bestellungen[(new \DateTime('next thursday'))->format('Ymd')] ?? [],
+            'friday' => $bestellungen[(new \DateTime('next friday'))->format('Ymd')] ?? [],
+        ];
 
         return [
             'kontostand' => $kontostand,
             'bestellungen' => $bestellungen,
+            'shortcuts' => $shortcuts,
             'helper' => $helper,
             'meta' => [
                 'updated' => $today->format('c')
@@ -115,7 +113,7 @@ class MensamaxApiService
 
     protected function getBestellungen(int $year, int $week): array
     {
-        $today = new \DateTime('yesterday');
+        $cutoffDate = new \DateTime('yesterday');
         $response = $this->client->post(
             '/graphql/',
             [
@@ -172,7 +170,7 @@ class MensamaxApiService
             );
             if (
                 !$date
-                || $date < $today
+                || $date < $cutoffDate
             ) {
                 continue;
             }
@@ -182,27 +180,40 @@ class MensamaxApiService
                     'week' => (int)$date->format('W'),
                     'bestellungen' => []
                 ];
-                $chatgptService = new ChatgptService($this->config['openai_apikey']);
                 foreach (['vorspeisen', 'hauptspeisen', 'nachspeisen'] as $key) {
                     $bestellungForDay['bestellungen'][$key] = trim(
                         ($item['bestellungen'][0]['menue'][$key][0]['bezeichnung'] ?? '')
                         . ' '
                         . ($item['bestellungen'][0]['menue'][$key][0]['beschreibung'] ?? '')
                     );
-                    $shortDescription = (string)$bestellungForDay['bestellungen'][$key];
-                    if (
-                        $bestellungForDay['bestellungen'][$key]
-                        && strlen($bestellungForDay['bestellungen'][$key]) > 10
-                    ) {
-                        $shortDescription = $chatgptService->getShortDescription(
-                            (string)$bestellungForDay['bestellungen'][$key]
-                        );
-                    }
-                    $bestellungForDay['shortDescription'][$key] = $shortDescription;
                 }
                 $bestellungen[$date->format('Ymd')] = $bestellungForDay;
             }
         }
+
+        // Alle Beschreibungen sammeln und in einem einzigen API-Call kürzen
+        $descriptionsToShorten = [];
+        foreach ($bestellungen as $dateKey => $bestellung) {
+            foreach (['vorspeisen', 'hauptspeisen', 'nachspeisen'] as $key) {
+                $text = $bestellung['bestellungen'][$key] ?? '';
+                if ($text && strlen($text) > 10) {
+                    $descriptionsToShorten[$dateKey . '_' . $key] = $text;
+                }
+            }
+        }
+
+        $chatgptService = new ChatgptService($this->config['openai_apikey']);
+        $shortDescriptions = $chatgptService->getShortDescriptions($descriptionsToShorten);
+
+        foreach ($bestellungen as $dateKey => &$bestellung) {
+            foreach (['vorspeisen', 'hauptspeisen', 'nachspeisen'] as $key) {
+                $lookupKey = $dateKey . '_' . $key;
+                $bestellung['shortDescription'][$key] = $shortDescriptions[$lookupKey]
+                    ?? ($bestellung['bestellungen'][$key] ?? '');
+            }
+        }
+        unset($bestellung);
+
         return $bestellungen;
     }
 
@@ -216,12 +227,16 @@ class MensamaxApiService
             $counter[(int)$bestellung['week']] = 1 + ($counter[$bestellung['week']] ?? 0);
         }
 
-        $today = new \DateTime('now');
-        $counter['thisweek'] = $counter[(int)$today->format('W')] ?? 0;
-        $counter['nextweek'] = $counter[(int)$today->format('W') + 1] ?? 0;
-        $counter['intwoweeks'] = $counter[(int)$today->format('W') + 2] ?? 0;
-        $counter['inthreeweeks'] = $counter[(int)$today->format('W') + 3] ?? 0;
-        $counter['infourweeks'] = $counter[(int)$today->format('W') + 4] ?? 0;
+        $date = new \DateTime('now');
+        $counter['thisweek'] = $counter[(int)$date->format('W')] ?? 0;
+        $date->modify('+1 week');
+        $counter['nextweek'] = $counter[(int)$date->format('W')] ?? 0;
+        $date->modify('+1 week');
+        $counter['intwoweeks'] = $counter[(int)$date->format('W')] ?? 0;
+        $date->modify('+1 week');
+        $counter['inthreeweeks'] = $counter[(int)$date->format('W')] ?? 0;
+        $date->modify('+1 week');
+        $counter['infourweeks'] = $counter[(int)$date->format('W')] ?? 0;
         return [
             'countByWeek' => $counter,
         ];

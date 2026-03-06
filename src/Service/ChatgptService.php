@@ -26,15 +26,26 @@ class ChatgptService
         return $summary;
     }
 
-    public function getShortDescription(string $string)
+    public function getShortDescriptions(array $items): array
     {
-        $prompt = 'Erstelle für die folgende Mensa-Bestellung eine kurze Zusammenfassung mit 
-        maximal 30 Zeichen. 
-        Hier ist die Bestellung:
+        if (empty($items)) {
+            return [];
+        }
 
-        ' . $string;
+        $list = json_encode($items, JSON_UNESCAPED_UNICODE);
+        $prompt = 'Erstelle für jede der folgenden Mensa-Bestellungen eine kurze Zusammenfassung mit maximal 30 Zeichen. '
+            . 'Antworte ausschließlich als JSON-Objekt mit denselben Keys und den Kurzbeschreibungen als Values. '
+            . 'Kein weiterer Text, nur das JSON-Objekt.' . "\n\n" . $list;
 
-        return $this->request($prompt);
+        $response = $this->request($prompt);
+
+        $decoded = json_decode($response, true);
+        if (is_array($decoded)) {
+            return $decoded;
+        }
+
+        // Fallback: Originaltexte zurückgeben
+        return $items;
     }
 
     /**
