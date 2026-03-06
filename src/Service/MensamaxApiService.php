@@ -10,7 +10,8 @@ class MensamaxApiService
     protected Client $client;
 
     public function __construct(
-        protected readonly array $config = []
+        protected readonly array $config = [],
+        protected readonly ?LlmServiceInterface $llmService = null
     ) {
     }
 
@@ -202,8 +203,9 @@ class MensamaxApiService
             }
         }
 
-        $chatgptService = new ChatgptService($this->config['openai_apikey']);
-        $shortDescriptions = $chatgptService->getShortDescriptions($descriptionsToShorten);
+        $shortDescriptions = $this->llmService
+            ? $this->llmService->getShortDescriptions($descriptionsToShorten)
+            : $descriptionsToShorten;
 
         foreach ($bestellungen as $dateKey => &$bestellung) {
             foreach (['vorspeisen', 'hauptspeisen', 'nachspeisen'] as $key) {

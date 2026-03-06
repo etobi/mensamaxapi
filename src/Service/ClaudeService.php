@@ -5,12 +5,12 @@ namespace Etobi\MensamaxApi\Service;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
-class ChatgptService extends AbstractLlmService
+class ClaudeService extends AbstractLlmService
 {
 
     public function __construct(
         protected string $apiKey = '',
-        protected string $model = 'gpt-4'
+        protected string $model = 'claude-sonnet-4-6'
     ) {
     }
 
@@ -19,27 +19,27 @@ class ChatgptService extends AbstractLlmService
         $client = new Client();
 
         try {
-            $response = $client->post('https://api.openai.com/v1/chat/completions', [
+            $response = $client->post('https://api.anthropic.com/v1/messages', [
                 'headers' => [
                     'Content-Type' => 'application/json',
-                    'Authorization' => 'Bearer ' . $this->apiKey,
+                    'x-api-key' => $this->apiKey,
+                    'anthropic-version' => '2023-06-01',
                 ],
                 'json' => [
                     'model' => $this->model,
+                    'max_tokens' => 200,
+                    'system' => self::SYSTEM_PROMPT,
                     'messages' => [
-                        ['role' => 'system', 'content' => self::SYSTEM_PROMPT],
                         ['role' => 'user', 'content' => $prompt]
                     ],
-                    'max_tokens' => 200,
-                    'temperature' => 0.5
                 ]
             ]);
 
             $result = json_decode($response->getBody(), true);
-            return $result["choices"][0]["message"]["content"]
-                ?? throw new LlmException('Unerwartetes API-Antwortformat von OpenAI');
+            return $result['content'][0]['text']
+                ?? throw new LlmException('Unerwartetes API-Antwortformat von Claude');
         } catch (RequestException $e) {
-            throw new LlmException('OpenAI-API-Fehler: ' . $e->getMessage(), 0, $e);
+            throw new LlmException('Claude-API-Fehler: ' . $e->getMessage(), 0, $e);
         }
     }
 }
