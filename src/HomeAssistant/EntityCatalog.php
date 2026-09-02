@@ -55,7 +55,7 @@ final readonly class EntityCatalog
                 'payload_available' => 'online',
                 'payload_not_available' => 'offline',
                 'device' => $this->device($account),
-                'origin' => ['name' => 'mensamax-api', 'url' => 'https://github.com/etobi/mensamax-api'],
+                'origin' => ['name' => 'mensamax-api', 'url' => 'https://github.com/etobi/mensamaxapi'],
             ];
             if (isset($entity['attributes'])) {
                 $payload['json_attributes_topic'] = $this->stateTopic($account);
