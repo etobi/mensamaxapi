@@ -1,5 +1,8 @@
-.env
-vendor/
-.idea/
-storage/*
-!.gitkeep
+/.env
+/vendor/
+/.idea/
+/data/*
+!/data/.gitkeep
+/.phpunit.cache/
+.DS_Store
+/.phpunit.result.cache

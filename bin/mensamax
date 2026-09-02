@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Etobi\Mensamax\Command\PublishCommand;
+use Etobi\Mensamax\Command\RemoveCommand;
+use Etobi\Mensamax\Config\AppConfig;
+use Etobi\Mensamax\Config\ConfigException;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\Dotenv\Exception\FormatException;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$envFile = dirname(__DIR__) . '/.env';
+try {
+    if (is_file($envFile)) {
+        (new Dotenv())->usePutenv(false)->load($envFile);
+    }
+    $config = AppConfig::fromEnv($_ENV + $_SERVER);
+} catch (ConfigException|FormatException $e) {
+    fwrite(STDERR, 'Configuration error: ' . $e->getMessage() . PHP_EOL);
+    exit(78);
+}
+date_default_timezone_set($config->timezone);
+
+$application = new Application('mensamax-api', '2.0.0');
+$application->addCommand(new PublishCommand($config));
+$application->addCommand(new RemoveCommand($config));
+$application->run();

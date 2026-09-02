@@ -1,15 +1,25 @@
 {
     "name": "etobi/mensamax-api",
+    "description": "Publishes Mensamax school canteen orders and balance to Home Assistant via MQTT discovery",
     "type": "project",
+    "license": "MIT",
     "require": {
-        "guzzlehttp/guzzle": "^7.8",
-        "symfony/dotenv": "^6.4",
-        "slim/slim": "4.*",
-        "guzzlehttp/psr7": "^2"
+        "php": ">=8.4",
+        "anthropic-ai/sdk": "^0.46.0",
+        "guzzlehttp/guzzle": "^8.1",
+        "php-mqtt/client": "^2.3",
+        "psr/log": "^3.0",
+        "symfony/console": "^8.1",
+        "symfony/dotenv": "^8.1"
     },
     "autoload": {
         "psr-4": {
-            "Etobi\\MensamaxApi\\": "src/"
+            "Etobi\\Mensamax\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Etobi\\Mensamax\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -17,5 +27,11 @@
             "name": "Tobias Liebig",
             "email": "mail@etobi.de"
         }
-    ]
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.3"
+    }
 }

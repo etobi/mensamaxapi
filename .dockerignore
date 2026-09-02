@@ -1,0 +1,13 @@
+.git
+.gitignore
+.idea
+.ddev
+.env
+.env.*
+.DS_Store
+data
+tests
+vendor
+phpunit.xml.dist
+README.md
+LICENSE

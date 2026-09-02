@@ -1,36 +1,25 @@
-FROM composer:latest as composer
+FROM composer:2 AS composer
 WORKDIR /app
 COPY composer.json composer.lock ./
-RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && \
-    composer clear-cache
-COPY . .
-RUN composer dump-autoload --no-scripts --no-dev --optimize
+RUN composer install --prefer-dist --no-dev --no-scripts --no-autoloader --no-interaction
+COPY bin ./bin
+COPY src ./src
+RUN composer dump-autoload --no-dev --optimize --classmap-authoritative
 
-# Depending on the composer you use, you may be required to use a different php version.
-FROM php:8.2-apache
-ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
-
-# RUN apt-get update && apt-get install -y \
-#    zip \
-# && rm -rf /var/lib/apt/lists/*
-
-# RUN echo "ServerName app.local" >> /etc/apache2/apache2.conf
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
-
-RUN a2enmod rewrite headers actions
-
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
-
-# RUN docker-php-ext-install \
-# zip
-
-COPY --from=composer /app /var/www/html
-
-ARG uid
-RUN useradd -G www-data,root -u $uid -d /home/appuser appuser
-RUN mkdir -p /home/appuser/.composer && \
-    chown -R appuser:appuser /home/appuser
-
-USER appuser
-RUN echo "export PATH=$PATH:/var/www/html/vendor/bin" >> /home/appuser/.bashrc
+FROM php:8.4-cli-alpine
+ENV TZ=Europe/Berlin \
+    DATA_DIR=/data \
+    PUBLISH_INTERVAL=3600
+RUN apk add --no-cache tzdata \
+    && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
+    && printf 'date.timezone=Europe/Berlin\nmemory_limit=128M\n' > "$PHP_INI_DIR/conf.d/mensamax.ini" \
+    && addgroup -S app && adduser -S -G app app \
+    && mkdir -p /data && chown app:app /data
+WORKDIR /app
+COPY --from=composer /app /app
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh /app/bin/mensamax
+USER app
+VOLUME ["/data"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["loop"]

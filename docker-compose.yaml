@@ -1,15 +1,11 @@
-version: '3'
 services:
-  mensamaxapi:
-    build:
-      context: '.'
-      args:
-        uid: 1000
-    image: mensamaxapi
-    ports:
-      - 8000:80
+  mensamax:
+    build: .
+    image: mensamax-api
+    container_name: mensamax-api
+    restart: unless-stopped
+    env_file: .env
     environment:
-      - APACHE_RUN_USER=#1000
-      - APACHE_RUN_GROUP=#1000
+      PUBLISH_INTERVAL: "3600"
     volumes:
-      - .:/var/www/html
+      - ./data:/data

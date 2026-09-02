@@ -1,0 +1,1607 @@
+{
+    "data": {
+        "meinSpeiseplan": [
+            {
+                "datum": "2026-08-31T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 33030,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-08-31T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Gnocchi mit Möhrenrahm-Sauce und Erbsen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 33239,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-08-31T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Schweinebraten mit Bratensauce, dazu Bio-Möhren und Kartoffeln",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 33967,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-08-31T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 34176,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-08-31T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-01T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39587,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-01T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Gurkensalat",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Grießbrei mit Bio-Milch mit Apfelkompott und Zimt & Zucker",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39588,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-01T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Gurkensalat",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Lasagne mit Linsenbolognese (Tomaten, Möhren, Lauch & Sellerie) mit Käse gratiniert",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39589,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-01T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41675,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-01T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-02T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39590,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-02T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Partysalat (Weißkraut, Möhren, Mais)",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Haferflocken-Käse-Bratling (Vollkorn) mit Tomatenreis und Kräuterquark",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39591,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-02T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Partysalat (Weißkraut, Möhren, Mais)",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Vegetarisches Gyros (Fleischersatz aus Milcheiweiß und Pflanzenfaser- Streifen) mit Zwiebeln und Paprikastreifen dazu Tomatenreis und Kräuterquark (mit Leinöl)",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39592,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-02T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41676,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-02T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-03T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39593,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-03T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Pizza Margherita mit Käse gratiniert",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Vanillepudding mit Bio-Milch",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39594,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-03T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Weißer-Bohneneintopf mit Wurzelgemüse (Möhren, Lauch und Sellerie) & Reisnudeln dazu Bio-Roggenbrötchen",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Vanillepudding mit Bio-Milch",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39595,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-03T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41677,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-03T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-04T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39596,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-04T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Möhren und Erbsen in Rahm mit Dampfkartoffeln und Omelette",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Obstsalat",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39597,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-04T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Hausgemachtes  Seelachs-Schlemmerfilet mit Kürbiskruste Brokkoli-Sauce & Kartoffeln",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Obstsalat",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39598,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-08-26T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-04T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-05T00:00:00.000+02:00",
+                "message": null,
+                "menues": []
+            },
+            {
+                "datum": "2026-09-06T00:00:00.000+02:00",
+                "message": null,
+                "menues": []
+            },
+            {
+                "datum": "2026-09-07T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39599,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-07T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "„Gemüse-Rösti“  (Kartoffelraspeln, Möhren, Zucchini, Romanesco, Paprika, Zwiebeln) dazu Rohkostsalat (Chinakohl, Möhre,  Gurke), Sour Cream (mit Leinöl) und Backkartoffeln",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39600,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-07T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Hack-Kohlpfanne (Weißkohl mit Veggie-Hack) dazu Kartoffeln",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39601,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-07T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41678,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-07T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-08T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39602,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-08T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Möhren-Kartoffel-Kokossuppe und Fladenbrot mit Sesam",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Quarkspeise KiBa (Kirsch und Banane)",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39603,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-08T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Lachsgratin in cremiger Sauce, Zucchini & Möhren Gemüse dazu Reis",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Quarkspeise KiBa (Kirsch und Banane)",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39604,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-08T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41679,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-08T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-09T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39605,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-09T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Gemüseauflauf (Erbsen, Möhren, Ei, Kartoffeln) mit Tomaten-Sauce",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39606,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-09T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "\"Gangstersuppe\" Cremiger Gemüse-Eintopf mit  gewürfeltem Hühnerfleisch dazu Baguette",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39607,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-09T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41680,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-09T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-10T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39608,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-10T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Bunter Salat (Eisberg, Radieschen, Möhren,  Chinakohl)  mit Hausdressing",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Polenta-Möhren-Ecke mit Frischkäsesauce & Gnocchi",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39609,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-10T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Bunter Salat (Eisberg, Radieschen, Möhren,  Chinakohl)  mit Hausdressing",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Currywurst (Rind)mit roter Currysauce  und Stampfkartoffeln mit Bio-Milch",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39610,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-10T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41681,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-10T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-11T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39611,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-11T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Kichererbsen-Karotten-Curry mit Tomaten und mit Langkornreis",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Grießpudding mit Bio-Milch (Zimt & Zucker extra)",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39612,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-11T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Gabelspaghetti mit cremiger Tomaten-Kürbissauce dazu Reibekäse",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Grießpudding mit Bio-Milch (Zimt & Zucker extra)",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39613,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-02T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-11T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-12T00:00:00.000+02:00",
+                "message": null,
+                "menues": []
+            },
+            {
+                "datum": "2026-09-13T00:00:00.000+02:00",
+                "message": null,
+                "menues": []
+            },
+            {
+                "datum": "2026-09-14T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39614,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-14T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Cremige Pastinakensuppe mit Kartoffelwürfeln dazu Baguette",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39615,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-14T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Bio-Vollkornpasta mit Gemüsesauce und gebratenem Welsfilet",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Frisches Obst",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39616,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-14T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41682,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-14T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-15T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39617,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-15T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Gemischter Salat (Eisberg,  Radieschen, Möhre) mit Joghurt- Dressing mit Bio-Joghurt",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Vegetarisches Wurstgulasch  mit Kürbis & Tomaten, dazu Reis",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39618,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-15T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Gemischter Salat (Eisberg,  Radieschen, Möhre) mit Joghurt- Dressing mit Bio-Joghurt",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Wurstgulasch (Truthahn/ Pute) mit Kürbis & Tomaten dazu Reis",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39619,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-15T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41683,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-15T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-16T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39620,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-16T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Kartoffelpizza  (großes Kartoffelrösti) mit Brokkoli, Tomaten und Reibekäse mit Kräuterquark-Dip (mit Leinöl) dazu Rohkost (Möhre & Gurke",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Schokoladenpudding (aus Biomilch)",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39621,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-16T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Käse-Lauch-Suppe mit (Bio-Rinderhack Lauch & Reibekäse) dazu Bio-Roggenbrötchen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Schokoladenpudding (aus Biomilch)",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39622,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-16T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41684,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-16T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-17T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39623,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-17T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": {
+                            "anzahl": 1
+                        },
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Möhrensalat",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Milchreis mit Bio-Milch dazu Apfelkompott und Zimt & Zucker (extra)",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39624,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-17T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [
+                            {
+                                "bezeichnung": "Möhrensalat",
+                                "beschreibung": null
+                            }
+                        ],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Veggie-Streifen (Erbsenproteine)  in Tomatensauce mit Spätzle",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 39625,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": true,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-17T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    },
+                    {
+                        "id": 41685,
+                        "reihenfolge": 4,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Lunchpaket"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-17T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-18T00:00:00.000+02:00",
+                "message": null,
+                "menues": [
+                    {
+                        "id": 39626,
+                        "reihenfolge": 1,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 1 (vegetarisch)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-18T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Frikadelle \"Bugs Bunny\" mit Möhren, Quark, Grieß und Eiern mit Petersiliensauce, dazu Kartoffelpüree mit Bio- Milch",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Obstsalat",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39627,
+                        "reihenfolge": 2,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 2"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-18T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Spinat in weißer Sauce mit Omelette und Kartoffeln",
+                                "beschreibung": null,
+                                "vegetarisch": true
+                            }
+                        ],
+                        "nachspeisen": [
+                            {
+                                "bezeichnung": "Obstsalat",
+                                "beschreibung": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39628,
+                        "reihenfolge": 3,
+                        "meinSpeiseplanShow": false,
+                        "preis": 4.49,
+                        "menuegruppe": {
+                            "bezeichnung": "Menü 3 (Salatbuffet)"
+                        },
+                        "fristen": {
+                            "bestellungBis": "2026-09-09T00:05:00.000+02:00",
+                            "abbestellungBis": "2026-09-18T08:00:00.000+02:00"
+                        },
+                        "meineBestellung": null,
+                        "vorspeisen": [],
+                        "hauptspeisen": [
+                            {
+                                "bezeichnung": "Tagesessen",
+                                "beschreibung": null,
+                                "vegetarisch": false
+                            }
+                        ],
+                        "nachspeisen": []
+                    }
+                ]
+            },
+            {
+                "datum": "2026-09-19T00:00:00.000+02:00",
+                "message": null,
+                "menues": []
+            },
+            {
+                "datum": "2026-09-20T00:00:00.000+02:00",
+                "message": null,
+                "menues": []
+            }
+        ]
+    }
+}
