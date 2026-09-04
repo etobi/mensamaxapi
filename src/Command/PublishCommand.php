@@ -11,6 +11,7 @@ use Etobi\Mensamax\HomeAssistant\MqttPublisher;
 use Etobi\Mensamax\HomeAssistant\PublishException;
 use Etobi\Mensamax\Llm\ShortenerFactory;
 use Etobi\Mensamax\Mensamax\MensamaxException;
+use PhpMqtt\Client\Exceptions\MqttClientException;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -60,7 +61,7 @@ final class PublishCommand extends Command
                 $logger->error(sprintf('Account "%s": %s', $account->id, $e->getMessage()));
                 try {
                     $publisher?->publishUnavailable($account);
-                } catch (PublishException $pe) {
+                } catch (PublishException|MqttClientException $pe) {
                     $logger->error($pe->getMessage());
                 }
                 continue;
@@ -72,7 +73,7 @@ final class PublishCommand extends Command
 
             try {
                 $publisher?->publishAccount($account, $overview);
-            } catch (PublishException $e) {
+            } catch (PublishException|MqttClientException $e) {
                 $failed++;
                 $logger->error(sprintf('Account "%s": %s', $account->id, $e->getMessage()));
             }

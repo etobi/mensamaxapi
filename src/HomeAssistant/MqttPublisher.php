@@ -37,8 +37,10 @@ final class MqttPublisher
         foreach ($this->catalog->discoveryMessages($account) as $topic => $payload) {
             $client->publish($topic, self::json($payload), 1, true);
         }
-        $client->publish($this->catalog->stateTopic($account), self::json($state), 1, true);
+        // Availability vor dem grossen State-Payload: schlaegt dessen Publish fehl,
+        // bleiben die Entitaeten trotzdem verfuegbar und zeigen den letzten Stand.
         $client->publish($this->catalog->availabilityTopic($account), 'online', 1, true);
+        $client->publish($this->catalog->stateTopic($account), self::json($state), 1, true);
         $this->logger->info(sprintf('Published state for account "%s" to %s', $account->id, $this->catalog->stateTopic($account)));
     }
 
@@ -66,6 +68,11 @@ final class MqttPublisher
             return;
         }
         try {
+            // Wartet, bis alle QoS-1-Nachrichten bestaetigt sind. Ohne das kann der
+            // letzte Publish beim Verbindungsabbau ungesendet verworfen werden.
+            if ($this->client->isConnected()) {
+                $this->client->loop(true, true, 10);
+            }
             $this->client->disconnect();
         } catch (MqttClientException $e) {
             $this->logger->warning('MQTT disconnect failed: ' . $e->getMessage());
@@ -83,6 +90,9 @@ final class MqttPublisher
             ->setUsername($this->config->username)
             ->setPassword($this->config->password)
             ->setUseTls($this->config->tls)
+            // Ohne blockierenden Socket wirft writeToSocket() bei einem Teil-Write ab,
+            // statt den Rest nachzuschieben - der grosse State-Payload kann das ausloesen.
+            ->useBlockingSocket(true)
             ->setConnectTimeout(10)
             ->setKeepAliveInterval(30);
 

@@ -9,6 +9,6 @@ fi
 interval="${PUBLISH_INTERVAL:-3600}"
 echo "mensamax-api: publishing every ${interval}s"
 while true; do
-    /app/bin/mensamax publish || echo "mensamax-api: publish failed with exit code $?"
+    /app/bin/mensamax publish -v || echo "mensamax-api: publish failed with exit code $?"
     sleep "$interval"
 done
